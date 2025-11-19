@@ -79,11 +79,11 @@ h2 {
     width: 2.2rem;
 }
 .btn-cancelar {
-    display: none; /*flex*/
+    display: flex;
     background: none;
     border: none;
     transition: .5s;
-    transform: translateX(10px);
+    opacity: 0;
 }
 .btn-cancelar span {
     display: inline-block;
@@ -99,8 +99,7 @@ h2 {
     transform:rotate(-45deg) translateX(-2px);
 }
 .btn-cancelar.on {
-    display: flex;
-    transform: translateX(0);
+    opacity: 1;
 }
 .lembrar-data{
     display: flex;
