@@ -8,21 +8,29 @@
 html {
     scroll-behavior: smooth;
 }
-body {
-    font-family: Inter;
-}
 
 :root {
     --primary: #10002B;
     --secondary: #240046;
+    --bg: #1A1A1A;
 }
 
+body {
+    font-family: Inter;
+    background: var(--bg);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 header section {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--primary);
     padding: 0 20px;
+    width: 100%;
     height: 64px;
 }
 .logo img {
@@ -65,4 +73,25 @@ header section {
 }
 .link-perfil img {
     width: 30px;
+}
+nav {
+    background: #24004660;
+    padding: 5px 10rem;
+    border-radius: 0 0 20px 20px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    transition: .3s;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+    transform: scale(105%);
 }
