@@ -150,6 +150,9 @@ main {
     border-style: solid;
     border-color: #3C096C;
     border-radius: 8px;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
 }
 .slideshow-progress span {
     display: inline-block;

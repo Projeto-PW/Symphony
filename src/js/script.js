@@ -29,7 +29,8 @@ const slides = [
     },
 ];
 
-const progress = document.querySelector(".slideshow-progress").querySelector("span");
+const progressBar = document.querySelector(".slideshow-progress");
+const progress = progressBar.querySelector("span");
 for(let i = 0; i < slides.length; i++) {
     const newSlide = document.createElement("span");
     const newCounter = document.createElement("span");
@@ -38,7 +39,7 @@ for(let i = 0; i < slides.length; i++) {
     newSlide.innerText = slides[i].nome;
     newSlide.style.background = slides[i].cor;
     newCounter.id = `counter${i}`;
-    newCounter.addEventListener("click", () => autoScroll(i));
+    newCounter.addEventListener("click", () => autoScroll(i, true));
     if(i == 0) {
         newCounter.classList.add("selected");
     }
@@ -46,6 +47,7 @@ for(let i = 0; i < slides.length; i++) {
 progress.style.width = `${100 / slides.length}%`;
 
 let autoScrolling = false;
+let waiting = false;
 
 function waitScrollEnd(element, callback) {
     let lastScroll = element.scrollLeft;
@@ -65,8 +67,9 @@ function waitScrollEnd(element, callback) {
     }, 20)
 }
 
-function autoScroll(index) {
-    const slide = document.getElementById(`counter${index}`);
+const slideshow = document.querySelector(".slideshow-images");
+function autoScroll(index, smooth) {
+    const slide = document.getElementById(`counter${Math.floor(index)}`);
     const slideWidth = slideshow.clientWidth;
     for(let i = 0; i < slides.length; i++) {
         document.getElementById(`counter${i}`).classList.remove("selected");
@@ -75,20 +78,20 @@ function autoScroll(index) {
     autoScrolling = true;
     slideshow.scrollTo({
         left: index * slideWidth,
-        behavior: "smooth"
+        behavior: smooth ? "smooth" : "auto"
     });
     waitScrollEnd(slideshow, () => {
         autoScrolling = false;
+        waiting = false;
     })
 }
 
 let timeout;
-const slideshow = document.querySelector(".slideshow-images");
 slideshow.addEventListener("scroll", () => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
         const slideWidth = slideshow.clientWidth;
-        const progressBarWidth = document.querySelector(".slideshow-progress").clientWidth;
+        const progressBarWidth = progressBar.clientWidth;
         const progressWidth = progress.clientWidth;
         let index = slideshow.scrollLeft / slideWidth;
         const maxDistance = progressBarWidth - progressWidth;
@@ -103,6 +106,31 @@ slideshow.addEventListener("scroll", () => {
             document.getElementById(`counter${Math.round(index)}`).classList.add("selected");
         }
         progress.style.left = `${distance}px`;
-        console.log(distance);
     }, 10);
+});
+
+
+function moveBar(e, smooth) {
+    const rect = progressBar.getBoundingClientRect();
+    let xPosition = e.clientX - rect.left;
+    xPosition = Math.max(0, Math.min(xPosition, rect.width)); //limita o movimento aos limites da progressBar
+    let index = (xPosition / rect.width) * slides.length;
+    autoScroll(index, smooth);
+};
+
+progressBar.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    progressBar.setPointerCapture(e.pointerId); //Enquanto o pointer estiver ativo, todos os movimentos só afetam a progressBar
+    waiting = true;
+    moveBar(e, true);
+});
+
+progressBar.addEventListener("pointermove", (e) => {
+    if(e.buttons !== 1 || waiting) return; //Se é diferente de 1, significa que nada está pressionado
+    e.preventDefault();
+    moveBar(e, false);
+});
+
+progressBar.addEventListener("pointerup", (e) => {
+    progressBar.releasePointerCapture(e.pointerId); //Devolve o controle dos movimentos ao navegador
 });
