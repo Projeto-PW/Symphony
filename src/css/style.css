@@ -162,3 +162,92 @@ main {
     border-radius: 15px;
     z-index: 1;
 }
+
+.musica {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    height: 100px;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+}
+#albumImg {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+}
+.musica article {
+    display: flex;
+    align-items: center;
+    background: var(--secondary);
+    flex: 1;
+    padding: 7.5px;
+    height: 75px;
+    border-radius: 0 50px 50px 0;
+}
+.control-music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+}
+.control-buttons {
+    display: flex;
+    gap: 1rem;
+}
+.musica button {
+    background: none;
+    border: none;
+}
+.musica button:hover {
+    transform: scale(105%);
+}
+.musica button:active {
+    transform: scale(100%);
+}
+.musica button img {
+    width: 20px;
+}
+#btnPlay img {
+    width: 25px;
+}
+.time-music {
+    display: flex;
+    align-items: center;
+    height: 15px;
+    width: 50%;
+}
+.time-ball {
+    position: absolute;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    z-index: 1;
+    background: #E0A7FF;
+    border-radius: 50%;
+}
+.timeline {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    border: 2px solid #1f1f1f;
+    background: #fff;
+}
+.current-time {
+    position: absolute;
+    display: inline-block;
+    height: 2.5px;
+    border-radius: 2px;
+    background: #7B2CBF;
+}
+#btnReplay {
+    width: 30px;
+    height: 30px;
+}
+#btnReplay img {
+    width: 30px;
+    height: 30px;
+}
