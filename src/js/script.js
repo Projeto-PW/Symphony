@@ -1,3 +1,4 @@
+//PROGRAMAÇÃO DO SLIDER
 const slides = [
     {
         nome: "slide 1",
