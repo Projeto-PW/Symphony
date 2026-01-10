@@ -69,13 +69,13 @@
         <article>
             <div class="control-music">
                 <section class="control-buttons">
-                    <button id="btnMusicaAnterior">
+                    <button id="btnMusicaAnterior" onclick="selSong(-1)">
                         <img src="./src/assets/back.svg">
                     </button>
                     <button id="btnPlay" onclick="playSong()">
                         <img src="./src/assets/play.svg">
                     </button>
-                    <button id="btnProximaMusica">
+                    <button id="btnProximaMusica" onclick="selSong(1)">
                         <img src="./src/assets/next.svg"> 
                     </button>
                 </section>
