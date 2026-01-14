@@ -15,6 +15,7 @@ const songs = [
 
 var songIndex = 0;
 let audio = new Audio();
+let replay = false
 
 const albumImg = document.getElementById("albumImg");
 const songTitle = document.querySelector(".info-text").querySelector("h2");
@@ -40,8 +41,16 @@ function loadSong(song) {
     });
 
     audio.addEventListener("ended", () => {
-        btnPlay.querySelector("img").src = "./src/assets/play.svg";
-        clearInterval(updateTime);
+        if(!replay) {
+            btnPlay.querySelector("img").src = "./src/assets/play.svg";
+            clearInterval(updateTime);
+            selSong(songIndex + 1);
+        }
+        else {
+            audio.currentTime = 0;
+            playSong();
+            toggleReplay();
+        }
     });
 }
 
@@ -53,7 +62,7 @@ function selSong(index) {
     const nextIndex = songIndex + index;
 
     if(nextIndex < 0 || nextIndex >= songs.length) {
-        alert(`Não há mais músicas ${index === 1 ? "depois" : "antes"} dessa`);
+        alert(`Não há mais músicas ${index >= songs.length ? "depois" : "antes"} dessa`);
         return;  
     }
     songIndex = nextIndex;
@@ -62,6 +71,7 @@ function selSong(index) {
 }
 
 const timeline = document.querySelector(".timeline");
+const timelineDiv = timeline.closest("div");
 const timeball = document.querySelector(".time-ball");
 
 function updateCurrentTime() {
@@ -93,15 +103,15 @@ function playSong() {
     }
 }
 
-timeline.addEventListener("pointermove", () => {
+timelineDiv.addEventListener("pointermove", () => {
     document.querySelector(".time-music").classList.add("hover")
 });
 
-timeline.addEventListener("pointerleave", () => {
+timelineDiv.addEventListener("pointerleave", () => {
     document.querySelector(".time-music").classList.remove("hover")
 });
 
-timeline.addEventListener("click", (e) => {
+timelineDiv.addEventListener("click", (e) => {
     const rect = timeline.getBoundingClientRect();
     const timelineWidth = timeline.clientWidth;
     const distance = e.clientX - rect.left;
@@ -109,3 +119,10 @@ timeline.addEventListener("click", (e) => {
     audio.currentTime = (duration * distance) / timelineWidth;
     updateCurrentTime();
 });
+
+const btnReplay = document.getElementById("btnReplay");
+
+function toggleReplay() {
+    replay = !replay;
+    btnReplay.querySelector("img").src = `./src/assets/replay${replay ? "Sel" : ""}.svg`;
+}

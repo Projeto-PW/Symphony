@@ -262,6 +262,7 @@ main {
     z-index: 2;
     background: #E0A7FF;
     border-radius: 50%;
+    pointer-events: none;
 }
 .timeline {
     width: 100%;
