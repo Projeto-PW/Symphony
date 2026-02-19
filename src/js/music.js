@@ -1,15 +1,16 @@
+const page = window.location.pathname.split("/").pop(); //devolve o nome do documento, separando o título. Se for index, vai retornar ""
 const songs = [
     {
         nome: "Keys to the Kingdom",
         artista: "Linkin Park",
-        capa: "./src/assets/capaTeste.webp",
-        audio: "./src/assets/audio/Teste.mp3"
+        capa: `${page == "" ? "./src/assets/capaTeste.webp" : "../assets/capaTeste.webp"}`,
+        audio: `${page == "" ? "./src/assets/audio/Teste.mp3" : "../assets/audio/Teste.mp3"}`
     },
     {
         nome: "Come As You Are",
         artista: "Nirvana",
-        capa: "./src/assets/capaTeste2.webp",
-        audio: "./src/assets/audio/Teste2.mp3"
+        capa: `${page == "" ? "./src/assets/capaTeste2.webp" : "../assets/capaTeste2.webp"}`,
+        audio: `${page == "" ? "./src/assets/audio/Teste2.mp3" : "../assets/audio/Teste2.mp3"}`
     }
 ];
 
@@ -91,14 +92,14 @@ function playSong() {
     const btnPlay = document.getElementById("btnPlay");
     if(audio.paused) {
         audio.play();
-        btnPlay.querySelector("img").src = "./src/assets/pause.svg";
+        btnPlay.querySelector("img").src = `.${page == "" ? "./src" : "."}/assets/pause.svg`;
         updateTime = setInterval(() => {
             updateCurrentTime();
         }, 100);
     }
     else {
         audio.pause();
-        btnPlay.querySelector("img").src = "./src/assets/play.svg";
+        btnPlay.querySelector("img").src = `.${page == "" ? "./src" : "."}/assets/play.svg`;
         updateTime = clearInterval(updateTime);
     }
 }
@@ -124,5 +125,5 @@ const btnReplay = document.getElementById("btnReplay");
 
 function toggleReplay() {
     replay = !replay;
-    btnReplay.querySelector("img").src = `./src/assets/replay${replay ? "Sel" : ""}.svg`;
+    btnReplay.querySelector("img").src = `.${page == "" ? "./src" : "."}/assets/replay${replay ? "Sel" : ""}.svg`;
 }

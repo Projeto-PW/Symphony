@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Músicas | Symphony</title>
+    <link rel="icon" href="../assets/logo.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/musicas.css">
+</head>
+<body>
+    <header>
+        <section>
+            <a href="index.html" class="logo">
+                <img src="../assets/logo.svg" alt="Logo">
+            </a>
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="PESQUISAR">
+                <img src="../assets/search.svg" alt="Barra de Pesquisa" class="img-pesquisa">
+            </div>
+            <a href="#" class="link-perfil"><img src="../assets/perfil.svg" alt="Foto de Perfil"></a>
+        </section>
+        <nav>
+            <ul>
+                <li><a href="">MÚSICAS</a></li>
+                <li><a href="">HOME</a></li>
+                <li><a href="">CRÉDITOS</a></li>
+                <li><a href="">PERFIL</a></li>
+                <li><a href="">CONFIG.</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img class="musicas-img" src="../assets/musicas.webp" alt="MÚSICAS">
+        <section class="list-section">
+            <ul id="musicList">
+                <li class="song">
+                    <img class="capa-album" src="../assets/exemploCapa.webp">
+                    <span>One Way Dream (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+                </li>
+                <li class="song">
+                    <img class="capa-album" src="../assets/exemploCapa.webp">
+                    <span>Break Through It All (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+                </li>
+                <li class="song">
+                    <img class="capa-album" src="../assets/exemploCapa.webp">
+                    <span>Find Your Flame (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+                </li>
+                <li class="song">
+                    <img class="capa-album" src="../assets/exemploCapa.webp">
+                    <span>Undefeatable (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+                </li>
+                <li class="song">
+                    <img class="capa-album" src="../assets/exemploCapa.webp">
+                    <span>Im Here (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+                </li>
+                <li class="song">
+                    <img class="capa-album" src="../assets/exemploCapa.webp">
+                    <span>Live And Learn (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+                </li>
+            </ul>
+            <img class="disco" src="../assets/sonicDisco.webp">
+        </section>
+        <img class="logo-game" src="../assets/logoSonic.webp" alt="Sonic The Hedgehog">
+    </main>
+    <section class="musica">
+        <div class="musica-info">
+            <div id="albumImg"></div>
+            <div class="info-text">   
+                <h2></h2>
+                <h3></h3>
+            </div>
+        </div>
+        <article>
+            <div class="control-music">
+                <section class="control-buttons">
+                    <button id="btnMusicaAnterior" onclick="selSong(-1)">
+                        <img src="../assets/back.svg">
+                    </button>
+                    <button id="btnPlay" onclick="playSong()">
+                        <img src="../assets/play.svg">
+                    </button>
+                    <button id="btnProximaMusica" onclick="selSong(1)">
+                        <img src="../assets/next.svg"> 
+                    </button>
+                </section>
+                <section class="time-music">
+                    <h5 id="tempoAtual"></h5>
+                    <div>
+                        <span class="time-ball"></span>
+                        <div class="timeline">
+                            <span class="current-time"></span>
+                        </div>
+                    </div>
+                    <h5 id="tempoTotal"></h5>
+                </section>
+            </div>
+            <button id="btnReplay" onclick="toggleReplay()"><img src="../assets/replay.svg"></button>
+        </article>
+    </section>
+    <script src="../js/script.js"></script>
+    <script src="../js/music.js"></script>
+</body>
+</html>

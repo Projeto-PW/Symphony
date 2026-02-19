@@ -1,0 +1,58 @@
+body {
+    overflow-x: hidden;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+}
+.musicas-img {
+    position: relative;
+    width: 300px;
+    top: 35px;
+}
+.list-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 75px 25px;
+    padding-bottom: 150px;
+    width: 100%;
+    border-top: 3px solid #4C1B4D;
+    border-bottom: 100px solid;
+    background: linear-gradient(to top, #602791, #1A1A1A) bottom / 100% 100px no-repeat;
+}
+#musicList {
+    list-style: none;
+    transition: transform 0.3s ease;
+}
+.song {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #914ECB, #4C266B);
+    gap: 1rem;
+    padding: 5px;
+    border: 1px solid #FFF;
+}
+.capa-album {
+    width: 40px;
+}
+.song span {
+    color: #FFF;
+}
+.disco {
+    position: relative;
+    right: -10%;
+    width: 550px;
+    height: 550px;
+}
+.logo-game {
+    position: absolute;
+    left: 25px;
+    top: 105%;
+    width: 200px;
+}
+.musica {
+    display: none;
+}
