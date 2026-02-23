@@ -44,11 +44,14 @@ main {
     transform: scale(var(--scale));
     transition: transform 0.1s ease;
 }
+.song.active {
+    cursor: pointer;
+}
 .song.active:hover {
     transform: scale(calc(var(--scale) * 1.01));
 }
 .song.active:active {
-    transform: scale(calc(var(--scale) * 1.01));
+    transform: scale(var(--scale));
 }
 .capa-album {
     width: 55px;
@@ -58,6 +61,7 @@ main {
     white-space: nowrap;
     overflow: hidden;
     font-size: 1.3rem;
+    user-select: none;
 }
 .disco {
     position: absolute;
