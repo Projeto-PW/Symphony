@@ -42,10 +42,10 @@ main {
     border: 1px solid #FFF;
     margin: 5px 0;
     transform: scale(var(--scale));
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 }
 .song.active:hover {
-    transform: scale(calc(var(--scale) * 1.02));
+    transform: scale(calc(var(--scale) * 1.01));
 }
 .song.active:active {
     transform: scale(calc(var(--scale) * 1.01));
