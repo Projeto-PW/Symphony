@@ -41,9 +41,9 @@
         </section>
     
         <section>
-            <div id="carrossel">
-                <button id="btn-proximo"><img src="#" alt="btn-proximo"></button>
-                <div id="carrossel-lista">
+            <div class="carrossel">
+                <button id="btnBack" onclick="carrosselScroll(-1)"><img src="./src/assets/btnBackNext2.svg" alt="<-"></button>
+                <div class="carrossel-list">
                     <div class="carrossel-item"></div>
                     <div class="carrossel-item"></div>
                     <div class="carrossel-item"></div>
@@ -54,7 +54,7 @@
                     <div class="carrossel-item"></div>
                     <div class="carrossel-item"></div>
                 </div>
-                <button id="btn-anterior"><img src="#" alt="btn-anterior"></button>
+                <button id="btnNext" onclick="carrosselScroll(1)"><img src="./src/assets/btnBackNext2.svg" alt="->"></button>
             </div>
         </section>
     </main>
