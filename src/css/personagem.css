@@ -1,0 +1,69 @@
+@property --bg-height { /* Definições de uma variável */
+    syntax: "<percentage>"; /* É, exclusivamente, uma porcentagem */
+    inherits: false; /* Define se a variável é herdada. Costuma-se usar false para animações */
+    initial-value: 0%; /* Valor inicial da variável */
+}
+
+header {
+    z-index: 3;
+}
+.inicio {
+    --bg-height: 0%;
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    border-bottom: 10px solid #0C35FF;
+    background: linear-gradient(to top, #181e3e, #111 var(--bg-height));
+    animation: open-bg 1s forwards; /* Com forwards, elemento permanece no último frame da animação */
+}
+.character-banner-image {
+    position: absolute;
+    height: 110vh;
+    top: 60px;
+    animation: open-character 1s forwards;
+}
+#btnSair {
+    position: absolute;
+    top: 100px;
+    left: 25px;
+}
+#btnSair img {
+    width: 50px;
+    transition: .1s ease;
+}
+#btnSair:hover img {
+    transform: scale(1.05);
+}
+.character-logo {
+    position: absolute;
+    top: 80vh;
+    width: 400px;
+    z-index: 2;
+}
+.divider {
+    height: 10px;
+    width: 100%;
+    background: #0C35FF;
+    position: relative;
+    top: 100%;
+}
+.musica {
+    display: none;
+}
+
+@keyframes open-bg {
+    0% {
+        --bg-height: 0%;
+    }
+    100% {
+        --bg-height: 50%;
+    }
+}
+@keyframes open-character {
+    0% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
