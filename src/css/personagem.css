@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+@font-face {
+    font-family: zing-rust-demo-base;
+    src: url(../css/fonts/zing.rust-demo-base.otf);
+}
+
 @property --bg-height { /* Definições de uma variável */
     syntax: "<percentage>"; /* É, exclusivamente, uma porcentagem */
     inherits: false; /* Define se a variável é herdada. Costuma-se usar false para animações */
@@ -47,8 +53,120 @@ header {
     position: relative;
     top: 100%;
 }
-.musica {
-    display: none;
+main {
+    background: #1a1a1a;
+    position: relative;
+    z-index: 1;
+    padding: 125px 25px;
+    margin-top: 0;
+}
+.character-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 100px;
+}
+.title-text {
+    display: flex;
+    align-items: center;
+}
+.title-text img {
+    width: 150px;
+    margin-right: 20px;
+}
+h2 {
+    font-family: zing-rust-demo-base;
+    color: #005BAA;
+    font-size: 50px;
+    font-weight: 900;
+    -webkit-text-stroke: .01px #00213e;
+}
+.character-desc p {
+    font-family: lexend;
+    color: #fff;
+    max-width: 600px;
+    text-align: center;
+}
+.text-with-image {
+    display: flex;
+    position: relative
+}
+.text-part {
+    max-width: 70%;
+}
+.title-part {
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+.topic-title-image {
+    position: absolute;
+    z-index: -1;
+    height: 100px;
+}
+h3 {
+    font-family: zing-rust-demo-base;
+    color: #005BAA;
+    font-size: 40px;
+    font-weight: 900;
+    margin-left: 35px;
+    -webkit-text-stroke: .01px #00213e;
+}
+article p {
+    margin-left: 50px;
+    color: #fff;
+    font-family: lexend;
+    font-size: 15px;
+}
+article li {
+    margin-left: 75px;
+    color: #fff;
+    font-family: lexend;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+.character-image {
+    position: absolute;
+    right: -5%;
+    height: 100%;
+}
+.list-with-image {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.character-image-list {
+    position: absolute;
+    right: 0;
+    min-height: 400px;
+    height: 100%;
+}
+.character-center-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.character-center-image img {
+    max-height: 800px;
+    max-width: 500px;
+    margin: 30px 0;
+}
+.center-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px
+}
+.center-title h3 {
+    margin-bottom: 20px;
+}
+.center-title ul {
+    max-width: 1000px;
+}
+.center-title li {
+    margin-left: 0;
 }
 
 @keyframes open-bg {
