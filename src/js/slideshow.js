@@ -1,4 +1,3 @@
-//PROGRAMAÇÃO DO SLIDER
 const slides = [
     {
         nome: "slide 1",
@@ -135,20 +134,3 @@ progressBar.addEventListener("pointermove", (e) => {
 progressBar.addEventListener("pointerup", (e) => {
     progressBar.releasePointerCapture(e.pointerId); //Devolve o controle dos movimentos ao navegador
 });
-
-// PROGRAMAÇÃO DO CARROSSEL
-const carrossel = document.querySelector(".carrossel-list");
-let isScrolling = false;
-
-function carrosselScroll(d) {
-    if(isScrolling) return;
-    isScrolling = true;
-    const carrosselItems = document.querySelectorAll(".carrossel-item");
-    const itemWidth = carrosselItems[0].offsetWidth;
-    const step = itemWidth + 32; // Soma da largura do item ao gap
-    carrossel.scrollBy({
-        left: d * step,
-        behavior: "smooth"
-    });
-    setTimeout(() => { isScrolling = false }, 500);
-}

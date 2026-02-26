@@ -131,6 +131,23 @@
                 </ul>
             </article>
         </section>
+        <section class="carrossel-section">
+            <div class="carrossel">
+                <button id="btnBack" onclick="carrosselScroll(-1)"><img src="../assets/btnBackNextSonic.svg" alt="<-"></button>
+                <div class="carrossel-list">
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                    <div class="carrossel-item"></div>
+                </div>
+                <button id="btnNext" onclick="carrosselScroll(1)"><img src="../assets/btnBackNextSonic.svg" alt="->"></button>
+            </div>
+        </section>
     </main>
     <section class="musica">
         <div class="musica-info">
@@ -167,6 +184,7 @@
             <button id="btnReplay" onclick="toggleReplay()"><img src="../assets/replay.svg"></button>
         </article>
     </section>
+    <script src="../js/carrossel.js"></script>
     <script src="../js/music.js"></script>
 </body>
 </html>

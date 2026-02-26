@@ -168,6 +168,19 @@ article li {
 .center-title li {
     margin-left: 0;
 }
+.carrossel-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.carrossel {
+    position: relative;
+    width: calc(100% / 3);
+    margin: 0 auto;
+}
+.carrossel-item {
+    flex: 0 0 100%
+}
 
 @keyframes open-bg {
     0% {
