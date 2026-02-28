@@ -49,9 +49,11 @@ main {
     transform: scale(calc(var(--scale) * 1.01))
 }
 .character img {
-    width: 350px;
-    height: auto;
+    height: 300px;
     transition: .1s ease;
+}
+.character.vertical img {
+    height: 400px;
 }
 .character img:hover {
     transform: scale(1.02);
@@ -80,12 +82,18 @@ main {
 .control-buttons img {
     width: 4rem;
     border-radius: 5px;
-}
-#btnBack img {
     transform: scaleX(-1);
 }
 .logo-game {
     position: absolute;
     bottom: -75px;
-    width: 200px;
+    height: 75px;
+}
+.logo-game.fullscreen {
+    width: 500px;
+    height: auto;
+    bottom: -150px;
+}
+.logo-game.smaller {
+    width: 400px;
 }
