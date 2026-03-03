@@ -10,6 +10,21 @@
     initial-value: 0%; /* Valor inicial da variável */
 }
 
+
+/* Definindo variáveis CSS de acordo com a página */
+body.sonic {
+    --border: #0C35FF;
+    --bg-gradient: #181E3E;
+    --text-color: #005BAA;
+    --text-contrast: #00213E;
+}
+body.shadow {
+    --border: #FF0C0C;
+    --bg-gradient: #361414;
+    --text-color: #1F1F1F;
+    --text-contrast: #BD0000;
+}
+
 header {
     z-index: 3;
 }
@@ -18,8 +33,8 @@ header {
     display: flex;
     justify-content: center;
     height: 90vh;
-    border-bottom: 10px solid #0C35FF;
-    background: linear-gradient(to top, #181e3e, #111 var(--bg-height));
+    border-bottom: 10px solid var(--border);
+    background: linear-gradient(to top, var(--bg-gradient), #111 var(--bg-height));
     animation: open-bg 1s forwards; /* Com forwards, elemento permanece no último frame da animação */
 }
 .character-banner-image {
@@ -46,10 +61,14 @@ header {
     width: 400px;
     z-index: 2;
 }
+.character-logo.big {
+    width: 600px;
+    top: 71vh;
+}
 .divider {
     height: 10px;
     width: 100%;
-    background: #0C35FF;
+    background: var(--border);
     position: relative;
     top: 100%;
 }
@@ -78,10 +97,10 @@ main {
 }
 h2 {
     font-family: zing-rust-demo-base;
-    color: #005BAA;
+    color: var(--text-color);
     font-size: 50px;
     font-weight: 900;
-    -webkit-text-stroke: .01px #00213e;
+    -webkit-text-stroke: .01px var(--text-contrast);
 }
 .character-desc p {
     font-family: lexend;
@@ -108,17 +127,18 @@ h2 {
 }
 h3 {
     font-family: zing-rust-demo-base;
-    color: #005BAA;
+    color: var(--text-color);
     font-size: 40px;
     font-weight: 900;
     margin-left: 35px;
-    -webkit-text-stroke: .01px #00213e;
+    -webkit-text-stroke: .01px var(--text-contrast);
 }
 article p {
     margin-left: 50px;
     color: #fff;
     font-family: lexend;
     font-size: 15px;
+    margin-bottom: 20px;
 }
 article li {
     margin-left: 75px;
@@ -136,6 +156,9 @@ article li {
     display: flex;
     align-items: center;
     position: relative;
+}
+.list-with-image ul {
+    width: 70%;
 }
 .character-image-list {
     position: absolute;
