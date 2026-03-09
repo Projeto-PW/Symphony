@@ -63,3 +63,28 @@
     border-radius: 15px;
     z-index: 1;
 }
+
+@media(max-width: 1024px) {
+    .slideshow, .slideshow-images {
+        height: 425px;
+    }
+}
+@media(max-width: 480px) {
+    .slideshow {
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    .slideshow-images {
+        height: 300px;
+    }
+    .slideshow-bar {
+        gap: .75rem;
+    }
+    .slideshow-counter {
+        gap: .5rem;
+    }
+    .slideshow-counter span {
+        width: 20px;
+        height: 20px;
+    }
+}

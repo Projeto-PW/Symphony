@@ -29,7 +29,6 @@ header {
     z-index: 3;
 }
 .inicio {
-    --bg-height: 0%;
     display: flex;
     justify-content: center;
     height: 90vh;
@@ -198,13 +197,9 @@ article li {
 }
 .carrossel {
     position: relative;
-    width: calc(100% / 3);
+    width: 100%;
     margin: 0 auto;
 }
-.carrossel-item {
-    flex: 0 0 100%
-}
-
 @keyframes open-bg {
     0% {
         --bg-height: 0%;
@@ -219,5 +214,124 @@ article li {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media (max-width: 1024px) {
+    main {
+        padding: 100px 10px;
+    }
+    .character-logo {
+        width: 300px;
+    }
+    .character-logo.big {
+        width: 450px;
+        top: 75vh;
+    }
+    .title-text img {
+        width: 100px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .character-desc p {
+        font-size: .8rem;
+    }
+    .title-part  {
+        height: 100px;
+    }
+    .topic-title-image {
+        height: 75px;
+    }
+    h3 {
+        font-size: 30px;
+        margin-left: 25px;
+    }
+    article p {
+        margin-left: 35px;
+        font-size: .75rem;
+    }
+    article li {
+        margin-left: 50px;
+        font-size: .75rem;
+    }
+    .character-image {
+        height: 85%;
+    }
+    .character-image-list {
+        height: 75%;
+        right: -10%;
+    }
+    .list-with-image ul {
+        width: 50%;
+    }
+    .character-center-image img {
+        max-height: 600px;
+        max-width: 375px;
+    }
+}
+@media(max-width: 768px) {
+    .inicio {
+        height: 60vh;
+    }
+    .character-banner-image {
+        height: 50vh;
+        top: 100px;
+    }
+    #btnSair img {
+        width: 30px;
+    }
+    .character-logo {
+        width: 200px;
+        top: 54vh;
+    }
+    .character-logo.big {
+        width: 300px;
+        top: 50vh;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .character-desc {
+        margin-bottom: 50px;
+    }
+    .character-desc p {
+        font-size: .6rem;
+    }
+    .text-part {
+        max-width: 50%;
+    }
+    .title-text img {
+        width: 60px;
+    }
+    .topic-title-image {
+        height: 50px;
+    }
+    h3 {
+        font-size: 25px;
+        margin-left: 15px;
+        min-width: 100vw;
+    }
+    article p {
+        font-size: .6rem;
+        margin-left: 20px;
+    }
+    article li {
+        font-size: .6rem;
+        margin-left: 30px;
+        margin-bottom: 15px;
+    }
+    .character-image {
+        height: 35%;
+        right: -10%;
+        top: 15%;
+    }
+    .character-image-list {
+        min-height: 200px;
+        right: -10%;
+    }
+    .character-center-image img {
+        max-width: 400px;
+        max-height: 250px;
     }
 }

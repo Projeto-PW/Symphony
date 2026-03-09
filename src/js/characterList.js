@@ -13,11 +13,14 @@ function updateList() {
         // As condicionais acima corrigem o desvio para o valor correto
         const scale = Math.pow(1.5, -Math.abs(offset)); // Escala final do item
         const z = -Math.abs(offset) * 100; // Profundidade do item
+        const x = window.innerWidth <= 768
+            ? offset * window.innerWidth * (Math.abs(offset) == 1 ? .25 : .3) 
+            : offset * window.innerWidth * (Math.abs(offset) == 1 ? .25 : .2);
         item.style.transform = `
             translate(-50%, -50%)
-            translateX(${offset * (offset == 1 ? 350 : 300)}px) ${/* Deslocamento do item baseado no desvio */""}
+            translateX(${x}px) ${/* Deslocamento do item baseado no desvio */""}
             translateZ(${z}px)
-            scale(${scale})
+            scale(${window.innerWidth <= 480 ? scale / 1.5 : scale})
         `;
         item.style.opacity = Math.exp(-0.2 * offset ** 2);
         item.style.top = `${50 - 15 * Math.abs(offset)}%`;

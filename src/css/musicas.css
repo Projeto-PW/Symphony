@@ -73,3 +73,40 @@ main {
     bottom: -75px;
     width: 200px;
 }
+@media(max-width: 1024px) {
+    .musicas-img {
+        width: 200px;
+        top: 25px;
+    }
+    .list-section {
+        height: 600px;
+        padding: 25px 0;
+        padding-bottom: 100px;
+    }
+    #musicList {
+        height: 250px;
+    }
+    .song {
+        gap: .8rem;
+    }
+    .capa-album {
+        width: 35px;
+    }
+    .song span {
+        font-size: .9rem;
+    }
+    .disco {
+        width: 350px;
+        height: 350px;
+    }
+    .logo-game {
+        width: 150px;
+        bottom: 100px;
+    }
+}
+@media(max-width: 768px) {
+    .disco {
+        width: 200px;
+        height: 200px;
+    }
+}

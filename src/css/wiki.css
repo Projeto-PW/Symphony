@@ -61,25 +61,25 @@ main {
 .character.active img:hover {
     transform: scale(1.05);
 }
-.control-buttons {
+.control-wiki-buttons {
     position: absolute;
     bottom: -25px;
     display: flex;
     justify-content: space-between;
     width: 35rem;
 }
-.control-buttons button {
+.control-wiki-buttons button {
     background: none;
     border: none;
     transition: .1s;
 }
-.control-buttons button:hover {
+.control-wiki-buttons button:hover {
     transform: scale(1.05);
 }
-.control-buttons button:active {
+.control-wiki-buttons button:active {
     transform: scale(1);
 }
-.control-buttons img {
+.control-wiki-buttons img {
     width: 4rem;
     border-radius: 5px;
     transform: scaleX(-1);
@@ -96,4 +96,37 @@ main {
 }
 .logo-game.smaller {
     width: 400px;
+}
+@media(max-width: 1024px) {
+    .wiki-img {
+        width: 150px;
+        top: 25px;
+    }
+    .list-section {
+        height: 600px;
+    }
+    .character img {
+        height: 150px;
+    }
+    .character.vertical img {
+        height: 200px;
+    }
+    .control-wiki-buttons {
+        bottom: 175px;
+        width: 15rem;
+    }
+    .control-wiki-buttons img {
+        width: 2.5rem;
+    }
+    .logo-game {
+        bottom: 160px;
+        height: 50px;
+    }
+    .logo-game.logo-game.fullscreen {
+        width: 150px;
+        bottom: 150px;
+    }
+    .logo-game.smaller {
+        width: 125px;
+    }
 }

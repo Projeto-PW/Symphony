@@ -58,7 +58,7 @@ header section {
     height: 100%;
     border: none;
     margin-right: 20px;
-    font-size: 0.95rem;
+    font-size: .95rem;
     outline: none;
 }
 .img-pesquisa {
@@ -80,7 +80,7 @@ header section {
     width: 30px;
 }
 nav {
-    background: #24004660;
+    background: #240046AA;
     padding: 5px 10rem;
     border-radius: 0 0 20px 20px;
 }
@@ -182,7 +182,7 @@ main {
     align-items: center;
     background: var(--secondary);
     flex: 1;
-    padding: 7.5px;
+    padding: 10px;
     height: 75px;
     border-radius: 50px;
 }
@@ -191,7 +191,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 95%;
     height: 100%;
 }
 .control-buttons {
@@ -269,4 +269,149 @@ main {
 #btnReplay img {
     width: 30px;
     height: 30px;
+}
+
+@media(max-width: 1024px) {
+    header section {
+        height: 50px;   
+    }
+    .logo img {
+        width: 40px;
+    }
+    .barra-pesquisa {
+        height: 35px;
+    }
+    .barra-pesquisa input {
+        font-size: .8rem;
+    }
+    .img-pesquisa {
+        height: 25px;
+        padding-left: 15px;
+    }
+    .link-perfil {
+        width: 40px;
+        height: 40px;
+    }
+    .link-perfil img {
+        width: 25px;
+    }
+    nav {
+        padding: 3px 5rem;
+    }
+    nav ul li a {
+        font-size: .9rem;
+    }
+    .carrossel-list {
+        gap: 1rem;
+    }
+    .carrossel-item {
+        flex: 0 0 calc((100% - 2rem) / 3);
+        height: 175px;
+        border-radius: 75px;
+    }
+    .carrossel button img {
+        width: 60px;
+    }
+    .control-music {
+        margin-left: 7rem;
+        width: 100%;
+    }
+    .time-ball {
+        width: 12px;
+        height: 12px;
+    }
+    #btnReplay {
+        margin-right: 20px;
+    }
+}
+@media(max-width: 768px) {
+    header section {
+        padding: 0 10px;   
+    }
+    .logo img {
+        width: 35px;
+    }
+    .barra-pesquisa {
+        height: 30px;
+    }
+    .barra-pesquisa input {
+        font-size: .7rem;
+    }
+    .img-pesquisa {
+        height: 20px;
+        padding-left: 5px;
+    }
+    .link-perfil {
+        width: 35px;
+        height: 35px;
+    }
+    .link-perfil img {
+        width: 20px;
+    }
+    nav {
+        padding: 1px 1rem;
+    }
+    nav ul li a {
+        font-size: .7rem;
+        margin: .2rem;
+    }
+    main {
+        padding: 15px 10px;
+    }
+    .carrossel-item {
+        flex: 0 0 100%;
+        height: 200px;
+        border-radius: 75px;
+    }
+    .musica {
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    .info-text {
+        gap: .2rem;
+    }
+    .info-text h2 {
+        font-size: .65rem;
+        width: 64px;
+    }
+    .info-text h3 {
+        font-size: .55rem;
+    }
+    .musica article {
+        height: 50px;
+    }
+    #albumImg {
+        width: 60px;
+        height: 60px;
+    }
+    .musica button img {
+        width: 10px;
+    }
+    #btnPlay img {
+        width: 15px;
+    }
+    .control-music {
+        margin-left: 6rem;
+    }
+    .time-music {
+        width: 70%;
+    }
+    .time-music h5 {
+        font-size: .5rem;
+        margin: 1px;
+    }
+    .time-ball {
+        width: 10px;
+        height: 10px;
+    }
+    .timeline {
+        height: 5px;
+    }
+    .current-time {
+        height: 2.5px   ;
+    }
+    #btnReplay img {
+        width: 20px;
+    }
 }
