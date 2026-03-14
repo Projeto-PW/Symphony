@@ -1,5 +1,5 @@
 const page = window.location.pathname.split("/").pop(); //devolve o nome do documento, separando o título.
-const src = page == "index.html" ? "./src" : ".."
+const src = page == "index.html" || page == "" ? "./src" : ".."
 const songs = [
     {
         nome: "Keys to the Kingdom",
