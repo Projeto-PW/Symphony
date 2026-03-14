@@ -101,6 +101,17 @@ h2 {
 .btn-cancelar.on {
     opacity: 1;
 }
+.invalid {
+    display: none;
+    color: #ff0000;
+    font-family: Inter;
+    font-size: .8rem;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.invalid.active {
+    display: inline-block;
+}
 .lembrar-data{
     display: flex;
     justify-content: space-between;

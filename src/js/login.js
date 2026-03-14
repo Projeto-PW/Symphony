@@ -1,6 +1,13 @@
 const inputEmail = document.getElementById("email");
 const inputSenha = document.getElementById("senha");
-const btnCancelar = document.querySelectorAll(".btn-cancelar");
+const invalidEmail = document.getElementById("invalidEmail");
+const invalidPassword = document.getElementById("invalidPassword");
+const users = [
+    {
+        email: "adm@adm.com",
+        senha: "adm123"
+    }
+]
 
 inputEmail.addEventListener("input", () => {
     if(inputEmail.value.length > 0)
@@ -18,4 +25,26 @@ inputSenha.addEventListener("input", () => {
 function limparTexto(btn) {
     btn.closest("div").querySelector("input").value = "";
     btn.classList.remove("on");
+}
+
+function login() {
+    users.forEach(user => {
+        if(inputEmail.value == user.email) {
+            if(inputSenha.value == user.senha) {
+                window.location.href = "../../index.html";
+            }
+            else {
+                inputSenha.value = "";
+                invalidPassword.style.display = "inline-block";
+            }
+        }
+        else {
+            inputEmail.value = "";
+            invalidEmail.style.display = "inline-block";
+            if(inputSenha.value != user.senha) {
+                inputSenha.value = "";
+                invalidPassword.style.display = "inline-block";
+            }
+        }
+    })
 }

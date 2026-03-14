@@ -20,11 +20,13 @@
                 <input id="email" type="email" placeholder="Email">
                 <button class="btn-cancelar" onclick="limparTexto(this)"><span></span><span></span></button>
             </div>
+            <span class="invalid" id="invalidEmail">Email inválido!</span>
             <div>
                 <img src="../assets/senha.svg">
                 <input id="senha" type="password" placeholder="Senha">
                 <button class="btn-cancelar" onclick="limparTexto(this)"><span></span><span></span></button>
             </div>
+            <span class="invalid" id="invalidPassword">Senha inválida!</span>
         </section>
         <section class="lembrar-data">
             <div>
@@ -34,7 +36,7 @@
             <a href="#">Esqueci a senha</a>
         </section>
         <section class="fazer-login">
-            <button id="btnEntrar">ENTRAR</button>
+            <button id="btnEntrar" onclick="login()">ENTRAR</button>
         </section>
     </main>
     <footer>
