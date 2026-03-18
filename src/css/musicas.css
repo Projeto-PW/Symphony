@@ -41,13 +41,13 @@ main {
     transform: scale(var(--scale));
     transition: transform 0.1s ease;
 }
-.song.active {
+.song {
     cursor: pointer;
 }
-.song.active:hover {
+.song:hover {
     transform: scale(calc(var(--scale) * 1.01));
 }
-.song.active:active {
+.song:active {
     transform: scale(var(--scale));
 }
 .capa-album {

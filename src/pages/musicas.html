@@ -18,7 +18,7 @@
                 <input type="text" placeholder="PESQUISAR">
                 <img src="../assets/search.svg" alt="Barra de Pesquisa" class="img-pesquisa">
             </div>
-            <a href="./src/pages/login.html" class="link-perfil"><img src="../assets/perfil.svg" alt="Foto de Perfil"></a>
+            <a href="./login.html" class="link-perfil"><img src="../assets/perfil.svg" alt="Foto de Perfil"></a>
         </section>
         <nav>
             <ul>
@@ -34,27 +34,31 @@
         <img class="musicas-img" src="../assets/musicas.webp" alt="MÚSICAS">
         <section class="list-section">
             <ul id="musicList">
-                <li class="song">
+                <li class="song" id="Song-1">
                     <img class="capa-album" src="../assets/exemploCapa.webp">
                     <span>One Way Dream (From Sonic Frontiers) - SEGA SOUND TEAM</span>
                 </li>
-                <li class="song">
+                <li class="song" id="Song-2">
                     <img class="capa-album" src="../assets/exemploCapa.webp">
                     <span>Break Through It All (From Sonic Frontiers) - SEGA SOUND TEAM</span>
                 </li>
-                <li class="song">
+                <li class="song" id="Song-3">
                     <img class="capa-album" src="../assets/exemploCapa.webp">
                     <span>Find Your Flame (From Sonic Frontiers) - SEGA SOUND TEAM</span>
                 </li>
-                <li class="song">
+                <li class="song" id="Song-4">
                     <img class="capa-album" src="../assets/exemploCapa.webp">
                     <span>Undefeatable (From Sonic Frontiers) - SEGA SOUND TEAM</span>
                 </li>
-                <li class="song">
+                <li class="song" id="Song-5">
                     <img class="capa-album" src="../assets/exemploCapa.webp">
                     <span>Im Here (From Sonic Frontiers) - SEGA SOUND TEAM</span>
                 </li>
-                <li class="song">
+                <li class="song" id="Song-6">
+                    <img class="capa-album" src="../assets/exemploCapa.webp">
+                    <span>Live And Learn (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+                </li>
+                <li class="song" id="Song-6">
                     <img class="capa-album" src="../assets/exemploCapa.webp">
                     <span>Live And Learn (From Sonic Frontiers) - SEGA SOUND TEAM</span>
                 </li>
@@ -74,13 +78,13 @@
         <article>
             <div class="control-music">
                 <section class="control-buttons">
-                    <button id="btnMusicaAnterior" onclick="selSong(-1)">
+                    <button id="btnMusicaAnterior" onclick="skipSong(-1)" disabled>
                         <img src="../assets/back.svg">
                     </button>
                     <button id="btnPlay" onclick="playSong()">
                         <img src="../assets/play.svg">
                     </button>
-                    <button id="btnProximaMusica" onclick="selSong(1)">
+                    <button id="btnProximaMusica" onclick="skipSong(1)">
                         <img src="../assets/next.svg"> 
                     </button>
                 </section>
