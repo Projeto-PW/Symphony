@@ -1,7 +1,7 @@
 const list = document.getElementById('musicList');
 const listItems = document.querySelectorAll('.song');
 const totalItems = listItems.length;
-const step = 75;
+const step = window.innerWidth <= 768 ? 55 : 75;
 let activeIndex;
 let isLooping = false; // Trava de segurança para impedir repetição infinita do loop
 
