@@ -24,6 +24,24 @@ body.shadow {
     --text-color: #1F1F1F;
     --text-contrast: #BD0000;
 }
+body.silver {
+    --border: #0CD2FF;
+    --bg-gradient: #11282B;
+    --text-color: #E6E6E6;
+    --text-contrast: #00CFD6;
+}
+body.knuckles {
+    --border: #870000;
+    --bg-gradient: #280F0F;
+    --text-color: #D20B0B;
+    --text-contrast: #500000;
+}
+body.tails {
+    --border: #F6FF00;
+    --bg-gradient: #292310;
+    --text-color: #FEAF00;
+    --text-contrast: #795300;
+}
 
 header {
     z-index: 3;
@@ -151,6 +169,9 @@ article li {
     right: -5%;
     height: 100%;
 }
+.character-image.right {
+    right: -20%;
+}
 .list-with-image {
     display: flex;
     align-items: center;
@@ -165,6 +186,9 @@ article li {
     min-height: 400px;
     height: 100%;
 }
+.character-image-list.right {
+    right: -5%;
+}
 .character-center-image {
     width: 100%;
     display: flex;
@@ -174,6 +198,9 @@ article li {
     max-height: 800px;
     max-width: 500px;
     margin: 30px 0;
+}
+.center-list {
+    text-align: center;
 }
 .center-title {
     display: flex;
@@ -325,6 +352,9 @@ article li {
         height: 35%;
         right: -10%;
         top: 15%;
+    }
+    .character-image.right {
+        right: -20%;
     }
     .character-image-list {
         min-height: 200px;
