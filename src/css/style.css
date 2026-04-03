@@ -123,9 +123,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events: none;
     flex: 0 0 calc((100% - 4rem) / 3);
     height: 275px;
-    background: #fff;
     border-radius: 100px;
     cursor: pointer;
 }
@@ -134,10 +134,13 @@ main {
     opacity: 60%;
     transition: .3s ease;
 }
-.carrossel-image.on {
+.carrossel-item.on {
+    pointer-events: auto;
+}
+.carrossel-item.on .carrossel-image {
     opacity: 100%;
 }
-.carrossel-image.on:hover {
+.carrossel-item.on .carrossel-image:hover {
     transform: scale(105%)
 }
 .carrossel button {

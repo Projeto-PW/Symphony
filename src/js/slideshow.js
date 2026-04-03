@@ -1,34 +1,4 @@
-const slides = [
-    {
-        nome: "slide 1",
-        cor: "#fff"
-    },
-    {
-        nome: "slide 2",
-        cor: "#eee"
-    },
-    {
-        nome: "slide 3",
-        cor: "#ddd"
-    },
-    {
-        nome: "slide 4",
-        cor: "#ccc"
-    },
-    {
-        nome: "slide 5",
-        cor: "#bbb"
-    },
-    {
-        nome: "slide 6",
-        cor: "#aaa"
-    },
-    {
-        nome: "slide 7",
-        cor: "#999"
-    },
-];
-
+const slides = ["./src/assets/dmcSlide.svg", "./src/assets/metalgearSlide.svg", "./src/assets/sonicSlide.svg", "./src/assets/ultrakillSlide.svg", "./src/assets/ghostSlide.svg", "./src/assets/personaSlide.svg"];
 const progressBar = document.querySelector(".slideshow-progress");
 const progress = progressBar.querySelector("span");
 for(let i = 0; i < slides.length; i++) {
@@ -36,8 +6,7 @@ for(let i = 0; i < slides.length; i++) {
     const newCounter = document.createElement("span");
     document.querySelector(".slideshow-images").appendChild(newSlide);
     document.querySelector(".slideshow-counter").appendChild(newCounter);
-    newSlide.innerText = slides[i].nome;
-    newSlide.style.background = slides[i].cor;
+    newSlide.style.backgroundImage = `url(${slides[i]})`
     newCounter.id = `counter${i}`;
     newCounter.addEventListener("click", () => autoScroll(i, true));
     if(i == 0) {
