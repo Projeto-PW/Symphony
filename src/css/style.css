@@ -112,7 +112,6 @@ main {
 .carrossel-list {
     display: flex;
     overflow-x: scroll;
-    pointer-events: none;
     width: 100%;
     gap: 2rem;
     margin: 0 37.5px;
@@ -121,10 +120,25 @@ main {
     display: none;
 }
 .carrossel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 0 0 calc((100% - 4rem) / 3);
     height: 275px;
     background: #fff;
     border-radius: 100px;
+    cursor: pointer;
+}
+.carrossel-image {
+    width: 100%;
+    opacity: 60%;
+    transition: .3s ease;
+}
+.carrossel-image.on {
+    opacity: 100%;
+}
+.carrossel-image.on:hover {
+    transform: scale(105%)
 }
 .carrossel button {
     position: absolute;
@@ -138,6 +152,7 @@ main {
     transform: scaleX(-1);
     right: 0;
 }
+
 .musica {
     display: flex;
     align-items: center;

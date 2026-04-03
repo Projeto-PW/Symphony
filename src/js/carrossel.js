@@ -1,4 +1,5 @@
 const carrossel = document.querySelector(".carrossel-list");
+const selectGame = document.querySelector(".selected-game");
 let isScrolling = false;
 
 function carrosselScroll(d) {
@@ -14,3 +15,11 @@ function carrosselScroll(d) {
     });
     setTimeout(() => { isScrolling = false }, 500);
 }
+
+function openGame() {
+    selectGame.style.display = "flex";
+}
+
+document.querySelectorAll(".carrossel-item").forEach(item => {
+    item.addEventListener("click", openGame());
+});
