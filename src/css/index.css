@@ -20,6 +20,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
     font-size: 30px;
     min-width: 100%;
 }
@@ -89,6 +91,9 @@ main {
     padding: 100px;
     width: 100%;
     height: 100%;
+}
+#descGame {
+    color: #fff;
 }
 
 @media(max-width: 1024px) {

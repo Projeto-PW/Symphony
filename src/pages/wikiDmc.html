@@ -1,99 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wiki | Symphony</title>
-    <link rel="icon" href="../assets/logo.svg">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/wiki.css">
-</head>
-<body>
+    <link rel="icon" href="../assets/logo.svg" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/wiki.css" />
+  </head>
+  <body>
     <header>
-        <section>
-            <a href="../../index.html" class="logo">
-                <img src="../assets/logo.svg" alt="Logo">
-            </a>
-            <div class="barra-pesquisa">
-                <input type="text" placeholder="PESQUISAR">
-                <img src="../assets/search.svg" alt="Barra de Pesquisa" class="img-pesquisa">
-            </div>
-            <a href="./login.html" class="link-perfil"><img src="../assets/perfil.svg" alt="Foto de Perfil"></a>
-        </section>
-        <nav>
-            <ul>
-                <li><a href="">MÚSICAS</a></li>
-                <li><a href="../../index.html">HOME</a></li>
-                <li><a href="">CRÉDITOS</a></li>
-                <li><a href="">PERFIL</a></li>
-                <li><a href="">CONFIG.</a></li>
-            </ul>
-        </nav>
+      <section>
+        <a href="../../index.html" class="logo">
+          <img src="../assets/logo.svg" alt="Logo" />
+        </a>
+        <div class="barra-pesquisa">
+          <input type="text" placeholder="PESQUISAR" />
+          <img
+            src="../assets/search.svg"
+            alt="Barra de Pesquisa"
+            class="img-pesquisa"
+          />
+        </div>
+        <a href="./login.html" class="link-perfil"
+          ><img src="../assets/perfil.svg" alt="Foto de Perfil"
+        /></a>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="">MÚSICAS</a></li>
+          <li><a href="../../index.html">HOME</a></li>
+          <li><a href="">CRÉDITOS</a></li>
+          <li><a href="">PERFIL</a></li>
+          <li><a href="">CONFIG.</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <img class="wiki-img" src="../assets/dmcWikiIcon.webp" alt="WIKI">
-        <section class="list-section">
-            <ul id="characterList">
-                <li class="character vertical">
-                    <a href="./personagem.html">
-                        <img src="../assets/neroWikiLink.webp" alt="Nero">
-                    </a>
-                </li>
-                <li class="character vertical">
-                    <a href="#">
-                        <img src="../assets/danteWikiLink.webp" alt="Vergil">
-                    </a>
-                </li>
-                <li class="character vertical">
-                    <a href="#">
-                        <img src="../assets/vergilWikiLink.webp" alt="Dante">
-                    </a>
-                </li>
-            </ul>
-            <div class="control-wiki-buttons">
-                <button id="btnBack" onclick="moveList(-1)"><img src="../assets/btnBackNext.svg"></button>
-                <button id="btnNext" onclick="moveList(1)"><img src="../assets/btnBackNext.svg"></button>
-            </div>
-        <img class="logo-game fullscreen smaller" src="../assets/logoDmc.webp" alt="Devil May Cry 5">
-        </section>
-        
+      <img class="wiki-img" src="../assets/dmcWikiIcon.webp" alt="WIKI" />
+      <section class="list-section">
+        <ul id="characterList">
+          <li class="character vertical">
+            <a href="./nero.html">
+              <img src="../assets/neroWikiLink.webp" alt="Nero" />
+            </a>
+          </li>
+          <li class="character vertical">
+            <a href="./dante.html">
+              <img src="../assets/danteWikiLink.webp" alt="Vergil" />
+            </a>
+          </li>
+          <li class="character vertical">
+            <a href="./vergil.html">
+              <img src="../assets/vergilWikiLink.webp" alt="Dante" />
+            </a>
+          </li>
+        </ul>
+        <div class="control-wiki-buttons">
+          <button id="btnBack" onclick="moveList(-1)">
+            <img src="../assets/btnBackNext.svg" />
+          </button>
+          <button id="btnNext" onclick="moveList(1)">
+            <img src="../assets/btnBackNext.svg" />
+          </button>
+        </div>
+        <img
+          class="logo-game fullscreen smaller"
+          src="../assets/logoDmc.webp"
+          alt="Devil May Cry 5"
+        />
+      </section>
     </main>
     <section class="musica">
-        <div class="musica-info">
-            <div id="albumImg"></div>
-            <div class="info-text">   
-                <h2></h2>
-                <h3></h3>
-            </div>
+      <div class="musica-info">
+        <div id="albumImg"></div>
+        <div class="info-text">
+          <h2></h2>
+          <h3></h3>
         </div>
-        <article>
-            <div class="control-music">
-                <section class="control-buttons">
-                    <button id="btnMusicaAnterior" onclick="selSong(-1)">
-                        <img src="../assets/back.svg">
-                    </button>
-                    <button id="btnPlay" onclick="playSong()">
-                        <img src="../assets/play.svg">
-                    </button>
-                    <button id="btnProximaMusica" onclick="selSong(1)">
-                        <img src="../assets/next.svg"> 
-                    </button>
-                </section>
-                <section class="time-music">
-                    <h5 id="tempoAtual"></h5>
-                    <div>
-                        <span class="time-ball"></span>
-                        <div class="timeline">
-                            <span class="current-time"></span>
-                        </div>
-                    </div>
-                    <h5 id="tempoTotal"></h5>
-                </section>
+      </div>
+      <article>
+        <div class="control-music">
+          <section class="control-buttons">
+            <button id="btnMusicaAnterior" onclick="selSong(-1)">
+              <img src="../assets/back.svg" />
+            </button>
+            <button id="btnPlay" onclick="playSong()">
+              <img src="../assets/play.svg" />
+            </button>
+            <button id="btnProximaMusica" onclick="selSong(1)">
+              <img src="../assets/next.svg" />
+            </button>
+          </section>
+          <section class="time-music">
+            <h5 id="tempoAtual"></h5>
+            <div>
+              <span class="time-ball"></span>
+              <div class="timeline">
+                <span class="current-time"></span>
+              </div>
             </div>
-            <button id="btnReplay" onclick="toggleReplay()"><img src="../assets/replay.svg"></button>
-        </article>
+            <h5 id="tempoTotal"></h5>
+          </section>
+        </div>
+        <button id="btnReplay" onclick="toggleReplay()">
+          <img src="../assets/replay.svg" />
+        </button>
+      </article>
     </section>
     <script src="../js/music.js"></script>
     <script src="../js/characterList.js"></script>
-</body>
+  </body>
 </html>
