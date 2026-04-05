@@ -294,6 +294,15 @@ main {
     width: 30px;
     height: 30px;
 }
+footer {
+    padding-top: 25px;
+    padding-bottom: 125px;
+    text-align: center;
+    background-color: #000;
+}
+h6 {
+    color: #fff;
+}
 
 @media(max-width: 1024px) {
     header section {
@@ -439,9 +448,16 @@ main {
         height: 5px;
     }
     .current-time {
-        height: 2.5px   ;
+        height: 2.5px;
     }
     #btnReplay img {
         width: 20px;
+    }
+    footer {
+        padding-top: 10px;
+        padding-bottom: 90px;
+    }
+    h6 {
+        font-size: .6rem;
     }
 }
