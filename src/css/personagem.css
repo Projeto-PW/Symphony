@@ -60,6 +60,24 @@ body.vergil {
     --text-color: #a7F2FF;
     --text-contrast: #00213E;
 }
+body.samuel {
+    --border: #426241;
+    --bg-gradient: #1D241C;
+    --text-color: #4C7F4B;
+    --text-contrast: #182F17;
+}
+body.armstrong {
+    --border: #7E7A6B;
+    --bg-gradient: #25241F;
+    --text-color: #765c49;
+    --text-contrast: #321d0d;
+}
+body.raiden {
+    --border: #404141;
+    --bg-gradient: #282828;
+    --text-color: #6D6D6D;
+    --text-contrast: #1F1E1E;
+}
 
 header {
     z-index: 3;
@@ -119,7 +137,8 @@ main {
 }
 .character-icon.center {
     position: absolute;
-    left: 40%;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 300px;
     z-index: -1;
 }
@@ -357,6 +376,9 @@ article li {
     }
     h2 {
         font-size: 1.4rem;
+    }
+    .character-icon.center {
+        width: 200px;
     }
     .character-desc {
         margin-bottom: 50px;
