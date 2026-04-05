@@ -387,6 +387,12 @@ main {
         height: 200px;
         border-radius: 75px;
     }
+    .carrossel-image {
+        height: 100%;
+    }
+    .carrossel button img {
+        width: 50px;
+    }
     .musica {
         bottom: 10px;
         left: 10px;
