@@ -75,24 +75,36 @@ main {
     margin-top: 100px;
 }
 #logoGame {
-    width: 40%;
+    width: 20%;
 }
 .selected-game article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 700px;
-    padding: 10px;
+    padding: 20px 10px;
     border: 5px solid #640AFF50;
     margin-top: 50px;
+}
+.game-link img {
+    height: 200px;
+    transition: .2s ease;
+}
+.game-link:hover img {
+    transform: scale(110%);
 }
 .game-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px;
+    padding: 25px 75px;
     width: 100%;
     height: 100%;
 }
 #descGame {
+    max-width: 900px;
+    font-size: 0.85rem;
+    text-align: justify;
     color: #fff;
 }
 
@@ -100,8 +112,20 @@ main {
     .slideshow, .slideshow-images {
         height: 425px;
     }
-    .selected-game article {
-        height: 400px;
+    .selected-game {
+        margin-top: 50px;
+    }
+    #logoGame {
+        width: 35%;
+    }
+    .game-link img {
+        height: 125px;
+    }
+    .game-content {
+        padding: 30px 50px;
+    }
+    #descGame {
+        font-size: .7rem;
     }
 }
 @media(max-width: 480px) {
@@ -121,5 +145,20 @@ main {
     .slideshow-counter span {
         width: 20px;
         height: 20px;
+    }
+    .selected-game {
+        margin-top: 20px;
+    }
+    #logoGame {
+        width: 50%;
+    }
+    .game-link img {
+        height: 100px;
+    }
+    .game-content {
+        padding: 20px 30px;
+    }
+    #descGame {
+        font-size: .55rem;
     }
 }
