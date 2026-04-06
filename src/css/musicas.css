@@ -70,7 +70,7 @@ main {
 .logo-game {
     position: absolute;
     left: 25px;
-    bottom: -75px;
+    bottom: -95px;
     width: 200px;
 }
 @media(max-width: 1024px) {

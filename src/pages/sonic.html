@@ -282,9 +282,12 @@
             <h5 id="tempoTotal"></h5>
           </section>
         </div>
-        <button id="btnReplay" onclick="toggleReplay()">
-          <img src="../assets/replay.svg" />
-        </button>
+        <div class="music-extra-controls">
+          <button id="btnReplay" onclick="toggleReplay()">
+            <img src="../assets/replay.svg" />
+          </button>
+          <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
       </article>
     </section>
     <footer>

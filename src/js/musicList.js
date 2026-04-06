@@ -15,7 +15,7 @@ function updateList() {
         const distRatio = Math.max(0, 1 - centerDist / (listRect.height / 2)); // Representa a distância em uma escala de 0 para 1, com o valor maior quanto mais próximo do centro
         item.style.setProperty("--scale", .7 + .3 * distRatio ** 2); // Atribui o valor a uma variável CSS
         item.style.opacity = .2 + distRatio * .8;
-        if(distRatio > .95) {
+        if(distRatio > .9) {
             item.classList.add("active") // Se o item estiver perto o bastante, classe 'active' é adicionada
             activeIndex = index;
         }
