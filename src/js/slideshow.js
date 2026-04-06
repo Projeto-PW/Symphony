@@ -1,19 +1,47 @@
 const slides = ["./src/assets/dmcSlide.svg", "./src/assets/metalgearSlide.svg", "./src/assets/sonicSlide.svg", "./src/assets/ultrakillSlide.svg", "./src/assets/ghostSlide.svg", "./src/assets/personaSlide.svg"];
 const progressBar = document.querySelector(".slideshow-progress");
 const progress = progressBar.querySelector("span");
+let slidesLoaded = 0;
+let slideLoop = 0;
+let scrollLoop;
+function startAutoScroll() {
+    clearInterval(scrollLoop);
+    scrollLoop = setInterval(() => {
+        slideLoop++;
+        if(slideLoop >= slides.length) {
+            slideLoop = 0;
+        }
+        autoScroll(slideLoop, true);
+    }, 2000);
+}
+
 for(let i = 0; i < slides.length; i++) {
-    const newSlide = document.createElement("span");
-    const newCounter = document.createElement("span");
-    document.querySelector(".slideshow-images").appendChild(newSlide);
-    document.querySelector(".slideshow-counter").appendChild(newCounter);
-    newSlide.style.backgroundImage = `url(${slides[i]})`
-    newCounter.id = `counter${i}`;
-    newCounter.addEventListener("click", () => autoScroll(i, true));
-    if(i == 0) {
-        newCounter.classList.add("selected");
+    const img = new Image();
+    img.src = slides[i];
+    img.onload = () => {
+        slidesLoaded++;
+        if(slidesLoaded == slides.length) {
+            initSlides();
+            // Primeiro as imagens são carregadas. Quando todas já foram carregadas, são associadas a um item no slideshow.
+        }
     }
 }
-progress.style.width = `${100 / slides.length}%`;
+
+function initSlides() {
+    for(let i = 0; i < slides.length; i++) {
+        const newSlide = document.createElement("span");
+        const newCounter = document.createElement("span");
+        document.querySelector(".slideshow-images").appendChild(newSlide);
+        document.querySelector(".slideshow-counter").appendChild(newCounter);
+        newSlide.style.backgroundImage = `url(${slides[i]})`
+        newCounter.id = `counter${i}`;
+        newCounter.addEventListener("click", () => autoScroll(i, true));
+        if(i == 0) {
+            newCounter.classList.add("selected");
+        }
+    }
+    progress.style.width = `${100 / slides.length}%`;
+}
 
 let autoScrolling = false;
 let waiting = false;
@@ -43,6 +71,7 @@ function autoScroll(index, smooth) {
     for(let i = 0; i < slides.length; i++) {
         document.getElementById(`counter${i}`).classList.remove("selected");
     }
+    clearInterval(scrollLoop);
     slide.classList.add("selected");
     autoScrolling = true;
     slideshow.scrollTo({
@@ -50,8 +79,8 @@ function autoScroll(index, smooth) {
         behavior: smooth ? "smooth" : "auto"
     });
     waitScrollEnd(slideshow, () => {
-        autoScrolling = false;
-        waiting = false;
+        startAutoScroll();
+        slideLoop = index;
     })
 }
 
@@ -83,7 +112,7 @@ function moveBar(e, smooth) {
     const rect = progressBar.getBoundingClientRect();
     let xPosition = e.clientX - rect.left;
     xPosition = Math.max(0, Math.min(xPosition, rect.width)); //limita o movimento aos limites da progressBar
-    let index = (xPosition / rect.width) * slides.length;
+    let index = Math.floor((xPosition / rect.width) * slides.length);
     autoScroll(index, smooth);
 };
 

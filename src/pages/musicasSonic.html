@@ -41,37 +41,37 @@
       <section class="list-section">
         <ul id="musicList">
           <li class="song" id="Song-1">
-            <img class="capa-album" src="../assets/exemploCapa.webp" />
+            <img class="capa-album" src="../assets/sonicAdventure2Capa.webp" />
             <span>One Way Dream (From Sonic Frontiers) - SEGA SOUND TEAM</span>
           </li>
           <li class="song" id="Song-2">
-            <img class="capa-album" src="../assets/exemploCapa.webp" />
+            <img class="capa-album" src="../assets/sonicAdventure2Capa.webp" />
             <span
               >Break Through It All (From Sonic Frontiers) - SEGA SOUND
               TEAM</span
             >
           </li>
           <li class="song" id="Song-3">
-            <img class="capa-album" src="../assets/exemploCapa.webp" />
+            <img class="capa-album" src="../assets/sonicAdventure2Capa.webp" />
             <span
               >Find Your Flame (From Sonic Frontiers) - SEGA SOUND TEAM</span
             >
           </li>
           <li class="song" id="Song-4">
-            <img class="capa-album" src="../assets/exemploCapa.webp" />
+            <img class="capa-album" src="../assets/sonicAdventure2Capa.webp" />
             <span>Undefeatable (From Sonic Frontiers) - SEGA SOUND TEAM</span>
           </li>
           <li class="song" id="Song-5">
-            <img class="capa-album" src="../assets/exemploCapa.webp" />
+            <img class="capa-album" src="../assets/sonicAdventure2Capa.webp" />
             <span>Im Here (From Sonic Frontiers) - SEGA SOUND TEAM</span>
           </li>
           <li class="song" id="Song-6">
-            <img class="capa-album" src="../assets/exemploCapa.webp" />
-            <span>Live And Learn (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+            <img class="capa-album" src="../assets/sonicAdventure2Capa.webp" />
+            <span>Live And Learn (From Sonic Adventure 2) - SEGA SOUND TEAM</span>
           </li>
           <li class="song" id="Song-6">
-            <img class="capa-album" src="../assets/exemploCapa.webp" />
-            <span>Live And Learn (From Sonic Frontiers) - SEGA SOUND TEAM</span>
+            <img class="capa-album" src="../assets/sonicAdventure2Capa.webp" />
+            <span>Live And Learn (From Sonic Adventure 2) - SEGA SOUND TEAM</span>
           </li>
         </ul>
         <img class="disco" src="../assets/sonicDisco.webp" />
@@ -114,9 +114,12 @@
             <h5 id="tempoTotal"></h5>
           </section>
         </div>
-        <button id="btnReplay" onclick="toggleReplay()">
-          <img src="../assets/replay.svg" />
-        </button>
+        <div class="music-extra-controls">
+          <button id="btnReplay" onclick="toggleReplay()">
+            <img src="../assets/replay.svg" />
+          </button>
+          <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
       </article>
     </section>
     <footer>

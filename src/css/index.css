@@ -75,7 +75,7 @@ main {
     margin-top: 100px;
 }
 #logoGame {
-    width: 20%;
+    width: 30%;
 }
 .selected-game article {
     display: flex;
@@ -85,6 +85,11 @@ main {
     padding: 20px 10px;
     border: 5px solid #640AFF50;
     margin-top: 50px;
+}
+.game-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 .game-link img {
     height: 200px;
@@ -103,7 +108,6 @@ main {
 }
 #descGame {
     max-width: 900px;
-    font-size: 0.85rem;
     text-align: justify;
     color: #fff;
 }
@@ -125,7 +129,7 @@ main {
         padding: 30px 50px;
     }
     #descGame {
-        font-size: .7rem;
+        font-size: .8rem;
     }
 }
 @media(max-width: 480px) {
@@ -159,6 +163,6 @@ main {
         padding: 20px 30px;
     }
     #descGame {
-        font-size: .55rem;
+        font-size: .6rem;
     }
 }

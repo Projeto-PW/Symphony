@@ -105,11 +105,13 @@
       <section class="selected-game">
         <img id="logoGame" />
         <article>
-          <a href="#" id="musicLink" class="game-link"><img alt="Músicas"></a>
+          <div class="game-links">
+            <a href="#" id="musicLink" class="game-link"><img alt="Músicas"></a>
+            <a href="#" id="wikiLink" class="game-link"><img alt="Wiki"></a>
+          </div>
           <div class="game-content">
             <p id="descGame"></p>
           </div>
-          <a href="#" id="wikiLink" class="game-link"><img alt="Wiki"></a>
         </article>
       </section>
     </main>
@@ -145,9 +147,12 @@
             <h5 id="tempoTotal"></h5>
           </section>
         </div>
-        <button id="btnReplay" onclick="toggleReplay()">
-          <img src="./src/assets/replay.svg" />
-        </button>
+        <div class="music-extra-controls">
+          <button id="btnReplay" onclick="toggleReplay()">
+            <img src="./src/assets/replay.svg" />
+          </button>
+          <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
       </article>
     </section>
     <footer>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Músicas | Symphony</title>
+    <link rel="icon" href="../assets/logo.svg" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/musicas.css" />
+  </head>
+  <body>
+    <header>
+      <section>
+        <a href="../../index.html" class="logo">
+          <img src="../assets/logo.svg" alt="Logo" />
+        </a>
+        <div class="barra-pesquisa">
+          <input type="text" placeholder="PESQUISAR" />
+          <img
+            src="../assets/search.svg"
+            alt="Barra de Pesquisa"
+            class="img-pesquisa"
+          />
+        </div>
+        <a href="./login.html" class="link-perfil"
+          ><img src="../assets/perfil.svg" alt="Foto de Perfil"
+        /></a>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="">MÚSICAS</a></li>
+          <li><a href="../../index.html">HOME</a></li>
+          <li><a href="">CRÉDITOS</a></li>
+          <li><a href="">PERFIL</a></li>
+          <li><a href="">CONFIG.</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img class="musicas-img" src="../assets/dmcMusicIcon.webp" alt="MÚSICAS" />
+      <section class="list-section">
+        <ul id="musicList">
+          <li class="song" id="Song-7">
+            <img class="capa-album" src="../assets/subhumanCapa.webp" />
+            <span>Subhuman (Dante's theme)</span>
+          </li>
+          <li class="song" id="Song-8">
+            <img class="capa-album" src="../assets/devilTriggerCapa.webp" />
+            <span>Devil Trigger (Nero's Theme)</span>
+          </li>
+          <li class="song" id="Song-9">
+            <img class="capa-album" src="../assets/crimsonCloudCapa.webp" />
+            <span>Crimison Cloud (V's Theme)</span>
+          </li>
+          <li class="song" id="Song-10">
+            <img class="capa-album" src="../assets/buryTheLightCapa.webp" />
+            <span>Bury the Light (Vergil's Theme)</span>
+          </li>
+          <li class="song" id="Song-11">
+            <img class="capa-album" src="../assets/dmc3Capa.webp" />
+            <span>Devil's Never Cry (From Devil May Cry 3)</span>
+          </li>
+          <li class="song" id="Song-12">
+            <img class="capa-album" src="../assets/dmc3Capa.webp" />
+            <span>Taste the Blood (From Devil May Cry 3)</span>
+          </li>
+          <li class="song" id="Song-13">
+            <img class="capa-album" src="../assets/dmc3Capa.webp" />
+            <span>Divine Hate (From Devil May Cry 3)</span>
+          </li>
+          <li class="song" id="Song-14">
+            <img class="capa-album" src="../assets/dmc4Capa.webp" />
+            <span>The Time Has Come (From Devil May Cry 4)</span>
+          </li>
+        </ul>
+        <img class="disco" src="../assets/dmcDisco.svg" />
+      </section>
+      <img
+        class="logo-game"
+        src="../assets/logoDmc.webp"
+        alt="Sonic: The Hedgehog"
+      />
+    </main>
+    <section class="musica">
+      <div class="musica-info">
+        <div id="albumImg"></div>
+        <div class="info-text">
+          <h2></h2>
+          <h3></h3>
+        </div>
+      </div>
+      <article>
+        <div class="control-music">
+          <section class="control-buttons">
+            <button id="btnMusicaAnterior" onclick="skipSong(-1)" disabled>
+              <img src="../assets/back.svg" />
+            </button>
+            <button id="btnPlay" onclick="playSong()">
+              <img src="../assets/play.svg" />
+            </button>
+            <button id="btnProximaMusica" onclick="skipSong(1)">
+              <img src="../assets/next.svg" />
+            </button>
+          </section>
+          <section class="time-music">
+            <h5 id="tempoAtual"></h5>
+            <div>
+              <span class="time-ball"></span>
+              <div class="timeline">
+                <span class="current-time"></span>
+              </div>
+            </div>
+            <h5 id="tempoTotal"></h5>
+          </section>
+        </div>
+        <div class="music-extra-controls">
+          <button id="btnReplay" onclick="toggleReplay()">
+            <img src="../assets/replay.svg" />
+          </button>
+          <input type="range" id="volume" min="0" max="100" value="50">
+        </div>
+      </article>
+    </section>
+    <footer>
+      <h6>&copy; 2025-2026 Symphony. Todos os direitos reservados</h6>
+    </footer>
+    <script src="../js/music.js"></script>
+    <script src="../js/musicList.js"></script>
+  </body>
+</html>

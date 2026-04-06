@@ -286,6 +286,14 @@ main {
 .time-music.hover .current-time {
     background: #7B2CBF;
 }
+.music-extra-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 5px;
+    height: 100%;
+}
 #btnReplay {
     width: 30px;
     height: 30px;
@@ -293,6 +301,30 @@ main {
 #btnReplay img {
     width: 30px;
     height: 30px;
+}
+#volume {
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #E0A7FF var(--volume), #fff var(--volume));
+    width: 90px;
+    height: 3px;
+    border-radius: 3px;
+    outline: none;
+}
+#volume:hover {
+    background: linear-gradient(to right, #7B2CBF var(--volume), #fff var(--volume));
+}
+#volume::-webkit-slider-thumb, #volume::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#volume:hover::-webkit-slider-thumb, #volume:hover::-moz-range-thumb {
+    background: #E0A7FF;
 }
 footer {
     padding-top: 25px;
@@ -452,6 +484,17 @@ h6 {
     }
     #btnReplay img {
         width: 20px;
+    }
+    .music-extra-controls {
+        padding-right: 1px;
+    }
+    #volume {
+        height: 2px;
+        width: 50px;
+    }
+    #volume::-webkit-slider-thumb, #volume::-moz-range-thumb {
+        width: 8px;
+        height: 8px;
     }
     footer {
         padding-top: 10px;
