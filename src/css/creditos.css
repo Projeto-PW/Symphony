@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-};
+}
 
 .desenvolvedores-container {
     display: flex;
@@ -18,54 +18,69 @@
     align-items: center;
     width: 100%;
     height: 100%;
+
+    gap: 200px;
 }
 
-.angelim-card {
-    
+.dev-card {
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-   position: relative;
+    position: relative;
+    overflow: visible;
     border-radius: 5px;
     padding: 1rem;
     isolation: isolate;
+    border-radius: 30px;
 }
 
-.angelim-card::before {
-    background-image: url('../assets/BG-gui.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 500px;
+.dev-card::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5; /* Ajuste a opacidade conforme necessário */
-    z-index: -1; /* Coloca a sobreposição atrás do conteúdo */
+    inset: 0; /* substitui top, left, width, height */
+    z-index: -1;
 }
+#gui{
+    /*Esta criado caso precie de alguma alteração, ma esta funcionando assim*/
+}
+
+#gui::before {
+    background-image: url('../assets/BG-gui.svg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    opacity:0.5 ;
+}
+
+#henry::before{
+    background-image: url('../assets/BG-henry.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+}
+
  .conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: auto;
+    width: 90%;
     height: auto;
     gap: 1rem;
     color: aliceblue;
 }
 
 .conteudo span {
-    color: blueviolet;
+    color: rgb(213, 51, 253);
 }
 
 .nav-icones{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(105, 2, 119, 0.5) !important; 
+    border-radius: 5px;
 }
 
 .nav-icones ul {
@@ -80,8 +95,12 @@
 }
 
 .nav-icones ul li a {
-    color: aliceblue;
     text-decoration: none;
+}
+
+.nav-icones ul li a img {
+    width: 30px;
+    height: 30px;
 }
 
 .text {
@@ -91,14 +110,37 @@
     gap: 0.5rem;
 }
 
-.angelim-card img{
-    width: 450px;
-    height: 450px;
+.icons{
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 }
 
-.gif {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+.foto-dev{
+    width: 300px;
+    height: 300px;
+}
+
+#gui-foto{
+    transform: scale(1.5);
+    position: relative;
+    left: 30px;
+    top: -30px;
+}
+
+.gif{
+    width: 250px;
+    height: 200px;
+}
+
+#gui-gif{
+    position: relative;
+    top: 80px;
+    left: 130px;
+}
+
+#henry-gif{
+    position: relative;
+    top: 140px;
+    left: 130px;
 }
