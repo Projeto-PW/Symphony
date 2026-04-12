@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,92 +10,178 @@
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/creditos.css" />
 </head>
+
 <body>
     <header>
         <section>
-          <a href="index.html" class="logo">
-            <img src="../assets/logo.svg" alt="Logo" />
-          </a>
-          <div class="barra-pesquisa">
-            <input type="text" placeholder="PESQUISAR" />
-            <img
-              src="../assets/search.svg"
-              alt="Barra de Pesquisa"
-              class="img-pesquisa"
-            />
-          </div>
-          <a href="../pages/login.html" class="link-perfil"
-            ><img src="../assets/perfil.svg" alt="Foto de Perfil"
-          /></a>
+            <a href="index.html" class="logo">
+                <img src="../assets/logo.svg" alt="Logo" />
+            </a>
+
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="PESQUISAR" />
+                <img src="../assets/search.svg" class="img-pesquisa" />
+            </div>
+
+            <a href="../pages/login.html" class="link-perfil">
+                <img src="../assets/perfil.svg" alt="Foto de Perfil" />
+            </a>
         </section>
+
         <nav>
-          <ul>
-            <li><a href="../pages/musicas.html">MÚSICAS</a></li>
-            <li><a href="../../index.html">HOME</a></li>
-            <li><a href="../pages/creditos.html">CRÉDITOS</a></li>
-            <li><a href="">PERFIL</a></li>
-            <li><a href="">CONFIG.</a></li>
-          </ul>
+            <ul>
+                <li><a href="../pages/musicas.html">MÚSICAS</a></li>
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="../pages/creditos.html">CRÉDITOS</a></li>
+                <li><a href="#">PERFIL</a></li>
+                <li><a href="#">CONFIG.</a></li>
+            </ul>
         </nav>
-      </header>
+    </header>
 
     <main>
+        <h1 class="title">CONHECA A NOSSA EQUIPE</h1>
+        <!-- ORIENTADOR -->
+        <section class="orientador-container">
+            <div>
+                <img src="../assets/cidade-icone.svg" class="orientador-icone" />
+                <h1 class="orientador-text">Wellington Cidade Silva</h1>
+                <h2>Orientador</h2>
+                <p class="orientador-text">Engenheiro de Software com experiência na área educacional, atuando como professor e coordenador de cursos voltados ao desenvolvimento de sistemas e jogos digitais. Possui também formação e prática como Scrum Master, aplicando metodologias ágeis para otimizar processos, promover a colaboração em equipe e garantir a entrega eficiente de projetos tecnológicos.</p>
+                <ul class="social-links">
+                    <li><a href="#"><img src="../assets/linkedin.svg"></a></li>
+                    <li><a href="#"><img src="../assets/insta.svg"></a></li>
+                    <li><a href="#"><img src="../assets/git.svg"></a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- DESENVOLVEDORES -->
         <section class="desenvolvedores-container">
+
+            <!-- GUILHERME -->
             <div class="dev-card" id="gui">
-                <img src="../assets/Guilherme-icone.svg" alt="foto do desenvolvedor" class="foto-dev" id="gui-foto">
+                <img src="../assets/Guilherme-icone.svg" alt="foto do desenvolvedor" class="foto-dev">
+
                 <div class="conteudo">
                     <div class="text">
                         <h1 class="nome">Guilherme Ferreira Angelim</h1>
-                        <span><h2 class="cargo">Designer e diretor de ideias criativas</h2></span>
-                        <p>Estudante de análise e desenvolvimento de sistemas: segundo ano. Realizou a criação do design do projeto e coordenou ideias criativas.</p>
+                        <h2 class="cargo">Designer e diretor de ideias criativas</h2>
+
+                        <p>
+                            Estudante de análise e desenvolvimento de sistemas: segundo ano. Realizou a criação do design do projeto e coordenou ideias criativas.
+                        </p>
+
                         <div class="nav-icones">
-                            <nav class="nav-icones">
-                                <ul>
-                                    <li>
-                                      <a href=""><img src="../assets/linkedin.svg" alt="" class="icons"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="../assets/insta.svg" alt="instagram" class="icons"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="../assets/git.svg" alt="github" class="icons"></a>
-                                    </li>
-                                </ul>
-                            </nav>
+                            <ul>
+                                <li><a href="#"><img src="../assets/linkedin.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/insta.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/git.svg" class="icons"></a></li>
+                            </ul>
                         </div>
-                    </div> 
+                    </div>
                 </div>
-                <img src="../assets/gui-gif.gif" alt="" class="gif" id="gui-gif">
+
+                <img src="../assets/gui-gif.gif" class="gif">
             </div>
 
+            <!-- HENRY -->
             <div class="dev-card" id="henry">
-              <img src="../assets/Henry-icone.svg" alt="foto do desenvolvedor" class="foto-dev">
-              <div class="conteudo">
-                  <div class="text">
-                      <h1 class="nome">Henry Rodrigues Visone</h1>
-                      <span><h2 class="cargo">Designer</h2></span>
-                      <p>Estudante de análise e desenvolvimento de sistemas: segundo ano. Auxiliou no desenvolvimento do design da página</p>
-                      <div class="nav-icones">
-                          <nav class="nav-icones">
-                              <ul>
-                                  <li>
-                                    <a href=""><img src="../assets/linkedin.svg" alt="" class="icons"></a>
-                                  </li>
-                                  <li>
-                                      <a href="#"><img src="../assets/insta.svg" alt="instagram" class="icons"></a>
-                                  </li>
-                                  <li>
-                                      <a href="#"><img src="../assets/git.svg" alt="github" class="icons"></a>
-                                  </li>
-                              </ul>
-                          </nav>
-                      </div>
-                  </div> 
-              </div>
-              <img src="../assets/henry-gif.gif" alt="" class="gif" id="henry-gif">
-          </div>
+                <img src="../assets/Henry-icone.svg" class="foto-dev">
+
+                <div class="conteudo">
+                    <div class="text">
+                        <h1>Henry Rodrigues Visone</h1>
+                        <h2>Designer</h2>
+
+                        <p>Estudante de análise e desenvolvimento de sistemas: segundo ano. Auxiliou no desenvolvimento do design da página</p>
+
+                        <div class="nav-icones">
+                            <ul>
+                                <li><a href="#"><img src="../assets/linkedin.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/insta.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/git.svg" class="icons"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="../assets/henry-gif.gif" class="gif">
+            </div>
+
+            <!-- TIRSO -->
+            <div class="dev-card" id="tirso">
+                <img src="../assets/Tirso- icone.svg" class="foto-dev">
+
+                <div class="conteudo">
+                    <div class="text">
+                        <h1>João Pedro Tirso</h1>
+                        <h2>Back-End</h2>
+
+                        <p>Estudante de análise e desenvolvimento de sistemas: segundo ano. Realizou o desenvolvimento dos bastidores do site(Back-End)</p>
+
+                        <div class="nav-icones">
+                            <ul>
+                                <li><a href="#"><img src="../assets/linkedin.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/insta.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/git.svg" class="icons"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="../assets/tirso-gif.gif" class="gif">
+            </div>
+
+            <!-- SANTAELLA -->
+            <div class="dev-card" id="santaella">
+                <img src="../assets/Santaela-icone.svg" class="foto-dev">
+
+                <div class="conteudo">
+                    <div class="text">
+                        <h1>Pedro Santaella</h1>
+                        <h2>Back-End</h2>
+
+                        <p>Estudante de análise e desenvolvimento de sistemas: segundo ano. Auxiliou no desenvolvimento back-end.</p>
+
+                        <div class="nav-icones">
+                            <ul>
+                                <li><a href="#"><img src="../assets/linkedin.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/insta.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/git.svg" class="icons"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="../assets/santaella-gif.gif" class="gif">
+            </div>
+
+            <!-- PREFEITO -->
+            <div class="dev-card" id="prefeito">
+                <img src="../assets/prefeito-icone.svg" class="foto-dev">
+
+                <div class="conteudo">
+                    <div class="text">
+                        <h1>Lucas de Comi Côrte</h1>
+                        <h2>Líder e desenvolvedor Full-Stack</h2>
+
+                        <p>Estudante de análise e desenvolvimento de sistemas: segundo ano. Auxiliou na organização interna da equipe, realizou o desenvolvimento da interface visual (front-end) e a funcionalidade do site (back-end)</p>
+
+                        <div class="nav-icones">
+                            <ul>
+                                <li><a href="#"><img src="../assets/linkedin.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/insta.svg" class="icons"></a></li>
+                                <li><a href="#"><img src="../assets/git.svg" class="icons"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="../assets/Prefeito-gif.gif" class="gif">
+            </div>
+
         </section>
     </main>
 </body>
 </html>
-
