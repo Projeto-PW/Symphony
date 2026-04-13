@@ -38,6 +38,7 @@ main {
     padding: 5px;
     border: 1px solid #FFF;
     margin: 5px 0;
+    min-width: 500px;
     transform: scale(var(--scale));
     transition: transform 0.1s ease;
 }
@@ -88,6 +89,7 @@ main {
     }
     .song {
         gap: .8rem;
+        min-width: 300px;
     }
     .capa-album {
         width: 35px;

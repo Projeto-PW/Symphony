@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Kodchasan';
+    src: url("./fonts/Kodchasan-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Abang";
+    src: url("./fonts/Abang.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +28,9 @@
 main {
     margin-top: 160px;
     border-top: 5px solid #4C1B4D;
+}
+main * {
+    font-family: "Kodchasan";
 }
 .orientador-container {
     display: flex;
@@ -56,6 +70,10 @@ main {
 }
 .social-links a img {
     width: 50px;
+    transition: .1s ease;
+}
+.social-links a:hover img {
+    transform: scale(1.05);
 }
 
 /* CONTAINER PRINCIPAL */
@@ -88,7 +106,6 @@ main {
     position: absolute;
     inset: 0;
     z-index: -1;
-    opacity: 0.5;
 }
 
 #gui::before {
@@ -158,6 +175,10 @@ main {
 .icons {
     width: 30px;
     height: 30px;
+    transition: .1s ease;
+}
+.icons:hover {
+    transform: scale(1.05);
 }
 
 /* GIF */
@@ -208,11 +229,18 @@ main {
         flex-direction: column;
         text-align: center;
     }
-
+    .dev-card h1 {
+        font-size: 1.5rem;
+    }
+    .dev-card h2 {
+        font-size: 1.2rem;
+    }
+    .dev-card p {
+        font-size: .8rem;
+    }
     .foto-dev {
         max-width: 200px;
     }
-
     .gif {
         max-width: 180px;
     }

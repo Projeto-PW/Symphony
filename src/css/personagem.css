@@ -97,9 +97,10 @@ header {
     animation: open-character 1s forwards;
 }
 #btnSair {
-    position: absolute;
+    position: fixed;
     top: 100px;
     left: 25px;
+    z-index: 3;
 }
 #btnSair img {
     width: 50px;

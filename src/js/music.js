@@ -117,7 +117,7 @@ const songs = [
         id: 15,
         nome: "Collective Consciousness",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/CollectiveConsciousness.mp3`,
         next: 16
     },
@@ -125,7 +125,7 @@ const songs = [
         id: 16,
         nome: "The War Still Rages Within",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/TheWarStillRagesWithin.mp3`,
         next: 17
     },
@@ -133,7 +133,7 @@ const songs = [
         id: 17,
         nome: "Rules of Nature",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/RulesOfNature.mp3`,
         next: 18
     },
@@ -141,7 +141,7 @@ const songs = [
         id: 18,
         nome: "Dark Skies",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/DarkSkies.mp3`,
         next: 19
     },
@@ -149,7 +149,7 @@ const songs = [
         id: 19,
         nome: "Im My Own Master Now",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/ImMyOwnMasterNow.mp3`,
         next: 20
     },
@@ -157,7 +157,7 @@ const songs = [
         id: 20,
         nome: "A Stranger I Remain",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/AStrangerIRemain.mp3`,
         next: 21
     },
@@ -165,7 +165,7 @@ const songs = [
         id: 21,
         nome: "Return to Ashes",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/ReturnToAshes.mp3`,
         next: 22
     },
@@ -173,7 +173,7 @@ const songs = [
         id: 22,
         nome: "The Stains of Time",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/TheStainsOfTime.mp3`,
         next: 23
     },
@@ -181,7 +181,7 @@ const songs = [
         id: 23,
         nome: "Red Sun",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/RedSun.mp3`,
         next: 24
     },
@@ -189,7 +189,7 @@ const songs = [
         id: 24,
         nome: "A Soul Can't Be Cut",
         artista: "",
-        capa: `${src}/assets/dmc4Capa.webp`,
+        capa: `${src}/assets/metalgearCapa.webp`,
         audio: `${src}/assets/audio/ASoulCantBeCut.mp3`,
         next: 1
     }

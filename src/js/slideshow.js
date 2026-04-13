@@ -4,16 +4,13 @@ const progress = progressBar.querySelector("span");
 let slidesLoaded = 0;
 let slideLoop = 0;
 let scrollLoop;
-function startAutoScroll() {
-    clearInterval(scrollLoop);
-    scrollLoop = setInterval(() => {
-        slideLoop++;
-        if(slideLoop >= slides.length) {
-            slideLoop = 0;
-        }
-        autoScroll(slideLoop, true);
-    }, 2000);
-}
+scrollLoop = setInterval(() => {
+    slideLoop++;
+    if(slideLoop >= slides.length) {
+        slideLoop = 0;
+    }
+    autoScroll(slideLoop, true);
+}, 2000);
 
 for(let i = 0; i < slides.length; i++) {
     const img = new Image();
@@ -71,7 +68,7 @@ function autoScroll(index, smooth) {
     for(let i = 0; i < slides.length; i++) {
         document.getElementById(`counter${i}`).classList.remove("selected");
     }
-    clearInterval(scrollLoop);
+    slideLoop = index;
     slide.classList.add("selected");
     autoScrolling = true;
     slideshow.scrollTo({
@@ -79,7 +76,6 @@ function autoScroll(index, smooth) {
         behavior: smooth ? "smooth" : "auto"
     });
     waitScrollEnd(slideshow, () => {
-        startAutoScroll();
         slideLoop = index;
     })
 }
